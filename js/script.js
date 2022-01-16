@@ -42,16 +42,17 @@ let games = [
      rating: 2.9,
     },
    ];
+   
 
    for (i = 0; i < games.length; i++) {
         const gameRating = games[i].rating
         const gameTitle = games[i].title
        if (gameRating <= 3.5) {
-        gamesList.innerHTML + "<li>" + gameTitle + "</li>";
+        gamesList.innerHTML += "<li>" + gameTitle + "</li>";
        }
    }
 
-   //Denne må jeg se mer på!!!!
+// The Witcher and Elder Scrolls should be rated higher imo
 
 // Question 4
 
@@ -63,12 +64,12 @@ function whatIDontLike (wakeUpCall) {
     }
 }
 
-whatIDontLike("Getting up early");
+whatIDontLike("getting up early");
 whatIDontLike(true);
 whatIDontLike(3); 
 whatIDontLike();
 
-//.toLowerCase
+
 
 
 // Question 5
@@ -93,6 +94,28 @@ document.getElementById("subtraction").innerHTML = myFunction(null, 123);
 
 
 // Question 6
+/*
+Change the title of the page (the value of the title element in the head) to "Updated title".
+Change the background colour of the whole page to "yellow". X
+Change the color of the h1 element to "green". X
+Change the h1 element's font to "impact". X
+Change the value of the h1 element to be a link.
+Remove the list style and padding from the ul element */
+
+let pageButton = document.querySelector(".page");
+let heading = document.querySelector("h1");
+
+function pageButtonPressed() {
+    heading.innerHTML = "Updated title"
+    document.querySelector("body").style.backgroundColor = "yellow";
+    heading.style.color = "green";
+    heading.style.fontFamily = "impact";
+    // Change the value of the h1 element to be a link.
+    document.querySelector("ul").style.listStyleType = "none";
+    
+}
+
+pageButton.onclick = pageButtonPressed;
 
 // Question 7
 
